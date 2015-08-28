@@ -1,10 +1,13 @@
 # attributes/default.rb
 
-# Gradle specifics for installation
-default[:gradle][:version] = '1.5'
-default[:gradle][:checksum] = 'a5511a0659caa47d9d74fd2844c9da43157d2f78e63a0223c6289d88f5aaecbe'
+# Set Zookeeper to use Exhibitor as its service manager
+default[:zookeeper][:service_style] = 'exhibitor'
 
-default[:exhibitor][:version]        = '1.5.0'
+# Gradle specifics for installation
+default[:gradle][:version] = '2.4'
+default[:gradle][:checksum] = 'c4eaecc621a81f567ded1aede4a5ddb281cc02a03a6a87c4f5502add8fc2f16f'
+
+default[:exhibitor][:version]        = '1.5.5'
 default[:exhibitor][:user]           = 'zookeeper'
 default[:exhibitor][:install_method] = 'build'
 default[:exhibitor][:loglevel]       = 'info'
@@ -26,8 +29,8 @@ default[:exhibitor][:cli] = {
 
 # Example --config S3 values
 #   node[:exhibitor][:cli][:configtype] = 's3'
-#   node[:exhibitor][:s3][:key] = 'key'
-#   node[:exhibitor][:s3][:secret] = 'secret'
+#   node[:exhibitor][:s3][:'access-key-id'] = 'key'
+#   node[:exhibitor][:s3][:'access-secret-key'] = 'secret'
 #   node[:exhibitor][:cli][:s3config] = 'example-bucket:fake/path'
 #   node[:exhibitor][:cli][:s3region] = 'us-west-1'
 

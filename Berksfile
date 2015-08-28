@@ -1,4 +1,3 @@
-site :opscode
+source 'https://supermarket.chef.io'
 
-cookbook 'zookeeper', git: 'git@github.com:SimpleFinance/chef-zookeeper.git'
 metadata
