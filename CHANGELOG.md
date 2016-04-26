@@ -1,7 +1,26 @@
 # CHANGELOG
 
 ## Unreleased
+
+## 0.9.0
+* Bump `zookeeper` to ~> 4.0 (#30 @f1yers)
+
+## 0.8.0
+* Add Upstart as an alternative to runit (#29 @davidgiesberg)
+
+## 0.7.1
+* Move installation of `node['exhibitor']['patch_package']` to execution phase (#26)
+* Drop testing in Chef 11 due to conflict w/ net-ssh gem installed by Serverspec
+
+## 0.7.0
+* Add Serverspec tests (#5)
+* Bump `zookeeper` to ~> 3.0 (#23)
+
+## 0.6.0
+* Add pins to all cookbook dependencies to avoid breaking changes
+* Add attribute to control Exhibitor service actions
 * Add attribute to set ZooKeeper to be managed by Exhibitor
+* Fix Chef overwriting shared config (#20)
 * Add `exhibitor::service` to default test suite
 * Use Chef Zero for Test Kitchen
 
